@@ -1,0 +1,144 @@
+@import './variables';
+
+body {
+  background: linear-gradient(87deg, $body-bg-start 0, $body-bg-end 100%);
+  color: $body-text-color;
+  @if $navbar-font != '' {
+    font-family: $body-text-font;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  color: $body-text-color;
+}
+
+#navbar-main {
+  nav {
+    background: linear-gradient(87deg, $navbar-bg-start 0, $navbar-bg-end 100%);
+    border-left: $navbar-border-left-px $navbar-border-type $navbar-border-color;
+    border-top: $navbar-border-top-px $navbar-border-type $navbar-border-color;
+    border-right: $navbar-border-right-px $navbar-border-type $navbar-border-color;
+    border-bottom: $navbar-border-bottom-px $navbar-border-type $navbar-border-color;
+    @if $navbar-radius != '' {
+      border-radius: $navbar-radius;
+    }
+
+    .shopping-cart {
+      fill: $navbar-text-color;
+      font-weight: bold;
+    }
+    .nav-link {
+      color: $navbar-text-color;
+      @if $navbar-font != '' {
+        font-family: $navbar-font;
+      }
+      @if $navbar-font-size != '' {
+        font-size: $navbar-font-size;
+      }
+
+      .badge {
+        color: $navbar-cart-color;
+      }
+    }
+  }
+}
+footer.footer-site {
+  background: linear-gradient(87deg, $footer-bg-start 0, $footer-bg-end 100%) !important;
+  a, .copyright {
+    color: $footer-text-color !important;
+  }
+}
+
+#navbar-categorias {
+  padding: 0.5rem !important;
+  background: linear-gradient(87deg, $navcat-bg-start 0, $navcat-bg-end 100%) !important;
+  border-left: $navcat-border-left-px $navcat-border-type $navcat-border-color;
+  border-top: $navcat-border-top-px $navcat-border-type $navcat-border-color;
+  border-right: $navcat-border-right-px $navcat-border-type $navcat-border-color;
+  border-bottom: $navcat-border-bottom-px $navcat-border-type $navcat-border-color;
+  @if $navcat-radius != '' {
+    border-radius: $navcat-radius;
+  }
+
+  .nav-link {
+    color: $navcat-text-color;
+    cursor: pointer;
+    @if $navcat-font != '' {
+      font-family: $navcat-font;
+    }
+    @if $navcat-font-size != '' {
+      font-size: $navcat-font-size;
+      ul.dropdown-menu button {
+        font-size: $navcat-font-size;
+        font-weight: normal;
+        padding: 0.25rem !important;;
+      }
+    }
+  }
+
+  .container-fluid button.navbar-toggler {
+    color: $navcat-text-color;
+  }
+}
+
+.product {
+  &__{
+    &button{
+      @if $btn-prod-bg != '' {
+        border: none;
+        background: $btn-prod-bg;
+      }
+      color: $btn-prod-color !important;
+    }
+  }
+}
+
+.sobre-title{
+  font-family: $sobre-font;
+  font-size: $sobre-font-size;
+  @if $sobre-text-color != '' {
+    color: $sobre-text-color;
+  }
+  //background: -webkit-linear-gradient(87deg, #eee, #333);
+  //-webkit-background-clip: text;
+}
+
+.card {
+  color: $body-color !important;
+  h1,h2,h3,h4,h5,h6{
+    color: $body-color !important;
+  }
+}
+
+@mixin font($font-family, $font-file, $extension) {
+  @font-face {
+    font-family: $font-family;
+
+    @if $extension == 'eot' {
+      src: url($font-file +'.eot');
+      src: url($font-file + '.eot?#iefix') format('embedded-opentype');
+    }
+
+    @if $extension == 'woff' {
+      src: url($font-file + '.woff') format('woff');
+    }
+
+    @if $extension == 'ttf' {
+      src: url($font-file + '.ttf') format('truetype');
+    }
+
+    @if $extension == 'svg' {
+      src: url($font-file + '.svg#aller') format('svg');
+    }
+
+    @if $extension == 'otf' {
+      src: url($font-file + '.otf') format('truetype');
+    }
+
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font($primary-custom-font, '~@/assets/vendor/fonts/'+$primary-custom-font, $primary-extension-font);
+@include font($secondary-custom-font, '~@/assets/vendor/fonts/'+$secondary-custom-font, $secondary-extension-font);
+@include font($third-custom-font, '~@/assets/vendor/fonts/'+$third-custom-font, $third-extension-font);

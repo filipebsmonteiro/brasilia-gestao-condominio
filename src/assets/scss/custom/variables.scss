@@ -1,0 +1,57 @@
+$primary-custom-font: "Moderat-Extended-Light";
+$primary-extension-font: "ttf";
+
+$secondary-custom-font: "Moderat-Regular";
+$secondary-extension-font: "ttf";
+
+$third-custom-font: "Moderat-Black";
+$third-extension-font: "ttf";
+
+$body-bg-start: #f8f9fe;
+$body-bg-end: #f8f9fe;
+$body-text-color: #4b4b4b;
+$body-text-font: '';
+
+// NavBar
+$navbar-bg-start: transparent;
+$navbar-bg-end: transparent;
+$navbar-text-color: #5E3D0B;
+$navbar-border-color: #5E3D0B;
+$navbar-border-left-px: 0px;
+$navbar-border-top-px: 0px;
+$navbar-border-right-px: 0px;
+$navbar-border-bottom-px: 2px;
+$navbar-border-type: solid;
+$navbar-radius: '';
+$navbar-cart-color: rgba(255, 255, 255, 0.8);;
+$navbar-font: 'Moderat-Extended-Light';
+$navbar-font-size: '';
+
+// Footer
+$footer-bg-start: gray;
+$footer-bg-end: darkgray;
+$footer-text-color: rgba(255, 255, 255, 0.8);
+
+// NavCat
+$navcat-bg-start: #813f0b;
+$navcat-bg-end: #793902;
+$navcat-text-color: rgba(255, 255, 255, 0.8);
+$navcat-border-color: transparent;
+$navcat-border-left-px: 0px;
+$navcat-border-top-px: 0px;
+$navcat-border-right-px: 0px;
+$navcat-border-bottom-px: 0px;
+$navcat-border-type: solid;
+$navcat-radius: 50rem;
+$navcat-font: $primary-custom-font;
+$navcat-font-size: x-large;
+
+//Produto
+$btn-prod-bg: '';
+$btn-prod-color: '';
+
+//Institucional
+//$sobre-text-color: linear-gradient(red 0, blue 100%);
+$sobre-text-color: '';
+$sobre-font: $primary-custom-font;
+$sobre-font-size: xxx-large;
