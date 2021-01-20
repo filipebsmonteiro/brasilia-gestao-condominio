@@ -6,6 +6,7 @@ import {can, hasPerfil} from "@/acl";
 Vue.use(Router)
 
 const RouterServiceProvider = new Router({
+    base: '/clientes/bsb-gestao',
     mode: 'history',
     linkExactActiveClass: 'active',
     //scrollBehavior () {

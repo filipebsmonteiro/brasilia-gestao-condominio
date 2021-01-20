@@ -2,7 +2,7 @@
     <SimpleTemplate>
         <div class="text-center empty d-flex flex-column w-75 m-auto">
             <h4 class="m-5">Access Denied</h4>
-            <img src="img/undraw_access_denied.svg" />
+            <img src="/img/undraw_access_denied.svg" />
             <slot />
         </div>
     </SimpleTemplate>
