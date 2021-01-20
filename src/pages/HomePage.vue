@@ -24,10 +24,10 @@
     <!--    Manutenção-->
     <section class="second-section m-5 pt-5 pb-5">
       <div class="row">
-        <div class="col">
+        <div class="col-lg-6">
           <b-img class="img-fluid" src="/img/brand/gestao.jpg"/>
         </div>
-        <div class="col">
+        <div class="col-lg-6">
           <div class="ml-5 mr-5">
             <h1>Gestão de Condomínio</h1>
             <p>Desde a criação da empresa Brasília Gestão de Condomínios - BSB, elegemos como ponto primordial e
@@ -42,11 +42,11 @@
     </section>
 
     <section class="third-section p-5">
-      <div class="m-5">
+      <div class="m-lg-5 mb-4">
         <h1>Links Rápidos</h1>
       </div>
-      <div class="row m-5">
-        <div class="col">
+      <div class="row m-lg-5">
+        <div class="col-lg-4 mb-2">
           <b-card class="shadow">
             <b-card-img-lazy src="/img/brand/car_1.png" class="mb-5"/>
             <h3>Acesse seu Condomínio</h3>
@@ -56,7 +56,7 @@
             </div>
           </b-card>
         </div>
-        <div class="col">
+        <div class="col-lg-4 mb-2">
           <b-card class="shadow">
             <b-card-img-lazy src="/img/brand/car_2.png" class="mb-4"/>
             <h3>Cadastro de Fornecedores</h3>
@@ -66,7 +66,7 @@
             </div>
           </b-card>
         </div>
-        <div class="col">
+        <div class="col-lg-4 mb-2">
           <b-card class="shadow">
             <b-card-img-lazy src="/img/brand/car_3.png" class="mb-5"/>
             <h3>Trabalhe conosco</h3>
@@ -79,7 +79,7 @@
       </div>
     </section>
 
-    <section class="fourth-section m-5">
+    <section class="fourth-section m-lg-5 m-2 mb-5">
       <div class="m-auto w-75">
         <h2 class="text-center">
           Fazendo e buscando sempre o Melhor para nossos
@@ -113,43 +113,41 @@
       </div>
       <div class="background-image d-flex">
         <b-carousel
-            :interval="3000"
+            :interval="100000"
             controls
             indicators
-            img-width="1024"
-            img-height="300"
             style="text-shadow: 1px 1px 2px #333;"
-            class="w-50"
+            class="w-75"
         >
-          <b-carousel-slide caption="Jhon Mackleine" img-blank>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-              a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-            </p>
-          </b-carousel-slide>
-          <b-carousel-slide caption="Laurie August" img-blank>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-              a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-            </p>
-          </b-carousel-slide>
-          <b-carousel-slide caption="Mary kay" img-blank>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-              a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-            </p>
-          </b-carousel-slide>
+          <b-carousel-slide
+              caption="Fernando Mackleine"
+              text="Após trocarem a gestão do condomínio pensei que não mudaria em nada, mas mudou sim e pra melhor!
+              Todas as solicitações e atendimentos foram altamente profissionais. E o condôminos realmente foram escutados."
+              img-src=""
+          />
+          <b-carousel-slide
+              caption="Lorena Gomes"
+              text="Para mim o melhor da nova gestão foi a questão de segurança. Para mim que tenho filhos pequenos
+              e vou para o parquinho, em diferentes horas do dia. Se sentir segura não tem preço."
+              img-src=""
+          />
+          <b-carousel-slide
+              caption="Mariane Lacerda"
+              text="Como funcionária da empresa vejo que realmente o que é prmetido se cumpre, a atenção, a prestatividade
+              E isso em todas as áreas, Administrativo, Financeiro, Jurídico, MAnutenção, etc..."
+              img-src=""
+          />
         </b-carousel>
       </div>
     </section>
 
     <section class="sixth-section m-5">
       <div class="row">
-        <div class="col">
+        <div class="col-lg-6">
           <b-img-lazy class="img-fluid" src="/img/brand/meeting.jpg"/>
         </div>
-        <div class="col">
-          <div class="ml-5 mr-5">
+        <div class="col-lg-6">
+          <div class="m-lg-5">
             <h1>Entre em contato conosco</h1>
             <p>Telefones:</p>
             <ul class="list-unstyled">
@@ -173,11 +171,6 @@ import Footer from '@/templates/Footer'
 export default {
   name: 'HomePage',
   components: {Footer, SiteBaseNav},
-  data() {
-    return {
-      mainProps: {blank: false, blankColor: '#777', width: 250, height: 250}
-    }
-  }
 }
 </script>
 
@@ -272,18 +265,30 @@ p {
 }
 
 .fifth-section {
+  background: url("/img/brand/condominium.jpg") center;
+  background-size: cover;
+
   h1 {
     font-family: $title;
+    color: whitesmoke;
+    text-shadow: 5px 5px 9px black;
   }
 
   .background-image {
-    background: url("/img/brand/condominium.jpg") top center;
-    background-size: cover;
 
     ::v-deep .carousel {
       border-radius: 20px;
       background: rgba(100, 100, 100, 0.6);
       margin: 1rem auto;
+
+      .carousel-caption {
+        position: relative !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 75%;
+        margin: auto;
+      }
 
       h3 {
         color: #f4f5f7;
