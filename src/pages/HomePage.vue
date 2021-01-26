@@ -2,7 +2,7 @@
   <div>
     <section class="first-section d-flex flex-column">
       <SiteBaseNav/>
-      <div class="container h-100 justify-content-center m-auto align-items-center">
+      <div class="container mb-auto mt-auto">
         <div class="row">
           <div class="col-md-12">
             <h2 style="font-family: 'Moderat-Regular';text-shadow: 5px 6px 9px black;">Ao seu lado na</h2>
@@ -13,16 +13,27 @@
       </div>
     </section>
 
-    <!--    Soluções-->
-    <!--    Serviços-->
-    <!--    Administrativo-->
-    <!--    Financeiro-->
-    <!--    Recursos Humanos-->
-    <!--    Cobrança-->
-    <!--    Jurídico-->
-    <!--    Comunicação online-->
-    <!--    Manutenção-->
-    <section class="second-section m-5 pt-5 pb-5">
+    <section class="second-section">
+      <div class="container row m-auto pt-5">
+        <div class="col-md-6">
+          <h1>A queridinha dos condomínios?</h1>
+          <p class="mb-0">Se pensou em não se preocupar e ter em quem confiar.</p>
+          <p>Com a gente é o seu lugar!</p>
+        </div>
+        <div class="col-md-6 list-activities">
+          <div><i class="jam jam-id-card"/>Administrativo</div>
+          <div><i class="jam jam-computer"/>Comunicação online</div>
+          <div><i class="jam jam-coin"/>Cobrança</div>
+          <div><i class="jam jam-users"/>Recursos Humanos</div>
+          <div><i class="fas fa-gavel"/>Jurídico</div>
+          <div><i class="fas fa-money-bill-alt"/>Financeiro</div>
+          <div><i class="jam jam-cogs"/>Manutenção</div>
+          <div><i class="fas fa-concierge-bell"/>Serviços</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="third-section m-5 pt-5 pb-5">
       <div class="row">
         <div class="col-lg-6">
           <b-img class="img-fluid" src="/img/brand/gestao.jpg"/>
@@ -41,7 +52,7 @@
       </div>
     </section>
 
-    <section class="third-section p-5">
+    <section class="fourth-section p-5">
       <div class="m-lg-5 mb-4">
         <h1>Links Rápidos</h1>
       </div>
@@ -79,7 +90,7 @@
       </div>
     </section>
 
-    <section class="fourth-section m-lg-5 m-2 mb-5">
+    <section class="fifth-section m-lg-5 m-2 mb-5">
       <div class="m-auto w-75">
         <h2 class="text-center">
           Fazendo e buscando sempre o Melhor para nossos
@@ -107,7 +118,7 @@
       </div>
     </section>
 
-    <section class="fifth-section mb-5">
+    <section class="sixth-section mb-5">
       <div class="container border-bottom">
         <h1>Depoimentos</h1>
       </div>
@@ -141,7 +152,7 @@
       </div>
     </section>
 
-    <section class="sixth-section m-5">
+    <section class="seventh-section m-5">
       <div class="row">
         <div class="col-lg-6">
           <b-img-lazy class="img-fluid" src="/img/brand/meeting.jpg"/>
@@ -176,6 +187,9 @@ export default {
 
 <style lang="scss" scoped>
 $title: 'Moderat-Black';
+h1 {
+  font-family: $title;
+}
 p {
   font-family: 'Moderat-Regular';
 }
@@ -240,36 +254,51 @@ p {
 }
 
 .second-section {
-  h1 {
-    font-family: $title;
+  .col-md-6:nth-child(2){
+    padding-left: 4rem;
+    border-left: lightslategray 1px solid;
+  }
+  .list-activities {
+    display: flex;
+    flex-flow: wrap;
+    max-width: 3rem;
+    div {
+      display: flex;
+      align-items: center;
+      font-family: $title;
+      i {
+        color: hsla(208, 62%, 64%, 1);
+        font-size: 25px;
+        margin-right: 1rem;
+      }
+    }
   }
 }
 
 .third-section {
+  .row {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.fourth-section {
   background: url("/img/brand/condominio.jpg") fixed center;
   background-size: cover;
 
   h1 {
-    font-family: $title;
     color: whitesmoke;
     text-shadow: 5px 5px 9px black;
   }
-
-  //background: rgba(238, 238, 238, 0.5);
 }
 
-.fourth-section {
-  h2 {
-    font-family: $title;
-  }
-}
+.fifth-section {}
 
-.fifth-section {
+.sixth-section {
   background: url("/img/brand/condominium.jpg") center;
   background-size: cover;
 
   h1 {
-    font-family: $title;
     color: whitesmoke;
     text-shadow: 5px 5px 9px black;
   }
@@ -298,10 +327,5 @@ p {
   }
 }
 
-.sixth-section {
-  ::v-deep .carousel-inner .carousel-item {
-    width: 100%;
-    height: 480px;
-  }
-}
+.seventh-section {}
 </style>

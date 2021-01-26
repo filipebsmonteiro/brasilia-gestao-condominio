@@ -25,7 +25,7 @@
 </script>
 
 <style lang="scss" scoped>
-  /deep/ #main-nav {
+  ::v-deep #main-nav {
     border-left: 1px;
     border-top: 1px;
     border-right: 1px;

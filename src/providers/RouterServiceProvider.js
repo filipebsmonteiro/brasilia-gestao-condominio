@@ -5,10 +5,18 @@ import {can, hasPerfil} from "@/acl";
 
 Vue.use(Router)
 
-const RouterServiceProvider = new Router({
-    base: '/clientes/bsb-gestao',
+let options = {
     mode: 'history',
     linkExactActiveClass: 'active',
+}
+if (process.env.VUE_APP_PUBLIC_PATH) {
+    options = {
+        ...options,
+        base: process.env.VUE_APP_PUBLIC_PATH
+    }
+}
+const RouterServiceProvider = new Router({
+    ...options,
     //scrollBehavior () {
     //  return { x: 0, y: 0 };
     //},
