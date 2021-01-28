@@ -110,33 +110,39 @@ footer.footer-site {
 }
 
 @mixin font($font-family, $font-file, $extension) {
-  @font-face {
-    font-family: $font-family;
+  $kinds: 'Light', 'Regular', 'Bold';
 
-    @if $extension == 'eot' {
-      src: url($font-file +'.eot');
-      src: url($font-file + '.eot?#iefix') format('embedded-opentype');
+  @each $kind in $kinds {
+    @font-face {
+      font-family: $font-family + '-' + $kind;
+
+      @if $extension == 'eot' {
+        src: url($font-file + '-' + $kind +'.eot');
+        src: url($font-file + '-' + $kind + '.eot?#iefix') format('embedded-opentype');
+      }
+
+      @if $extension == 'woff' {
+        src: url($font-file + '-' + $kind + '.woff') format('woff');
+      }
+
+      @if $extension == 'ttf' {
+        src: url($font-file + '-' + $kind + '.ttf') format('truetype');
+      }
+
+      @if $extension == 'svg' {
+        src: url($font-file + '-' + $kind + '.svg#aller') format('svg');
+      }
+
+      @if $extension == 'otf' {
+        src: url($font-file + '-' + $kind + '.otf') format('truetype');
+      }
+
+      font-weight: normal;
+      font-style: normal;
     }
 
-    @if $extension == 'woff' {
-      src: url($font-file + '.woff') format('woff');
-    }
-
-    @if $extension == 'ttf' {
-      src: url($font-file + '.ttf') format('truetype');
-    }
-
-    @if $extension == 'svg' {
-      src: url($font-file + '.svg#aller') format('svg');
-    }
-
-    @if $extension == 'otf' {
-      src: url($font-file + '.otf') format('truetype');
-    }
-
-    font-weight: normal;
-    font-style: normal;
   }
+
 }
 
 @include font($primary-custom-font, '~@/assets/vendor/fonts/'+$primary-custom-font, $primary-extension-font);
