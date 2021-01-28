@@ -14,7 +14,7 @@
       </div>
       <div class="w-25">
         <CardAvatar
-            img="car_2.jpg"
+            img="card_2.jpg"
             title="Cadastro de Fornecedores"
             text="Preencha o cadastro, no link abaixo, e seja nosso fornecedor."
             link-text="Cadastro"
@@ -22,7 +22,7 @@
       </div>
       <div class="w-25">
         <CardAvatar
-            img="car_3_ilustration.jpg"
+            img="card_3_ilustration.jpg"
             title="Trabalhe Conosco"
             text="Nos envie seu curriculum e contatos através do link abaixo."
             link-text="Currículo"

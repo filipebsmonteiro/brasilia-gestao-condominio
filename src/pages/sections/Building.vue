@@ -23,7 +23,7 @@ name: "Building",
 
 <style lang="scss" scoped>
 .section {
-  background: url("/img/brand/building.jpg") top center;
+  background: url("/img/sections/building.jpg") top center;
   background-size: cover;
   min-height: 100vh !important;
 
