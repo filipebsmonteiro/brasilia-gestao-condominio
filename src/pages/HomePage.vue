@@ -198,7 +198,7 @@ p {
 .fifth-section {}
 
 .sixth-section {
-  background: url("/img/brand/condominium.jpg") center;
+  background: url("/img/sections/condominium.jpg") center;
   background-size: cover;
 
   h1 {
